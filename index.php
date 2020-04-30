@@ -1,45 +1,31 @@
 <?php
-    $name = "Bill";
-    // if ($name == "Devin") {
-    //     echo "Hi Devin";
-    // } elseif ($name == "Susy") {
-    //     echo "Hi Susy!";
-    // } else {
-    //     echo "Hi Stranger!";
-    // }
-
-    switch ($name) {
-        case "Devin":
-            echo "Hi Devin";
-            break;
-        case "Joe":
-            echo "Hi Joe";
-            break;
-        case "Susy":
-            echo "Hi Susy";
-            break;
-        default:
-            echo "Hi Stranger!";
-    }
-    $age = 16;
-    switch ($age) {
-        case $age >= 21: 
-            echo "You're old enough to drink and smoke";
-        break;
-        case $age >= 18:
-            echo "You're not old enough to only smoke";
-        break;
-        default:
-            echo "You're not old enough to drink and smoke";
-    }
-    $total = 101;
-    if ($total > 50 && $total < 100) {
-        echo "You get a free soda";
-    } elseif ($total > 100) {
-        echo "You get a free t-bone steak and soda";
-    } else {
-        echo "Your total is {$total}";
-    }
+    $cars = [
+        [
+            "Model" => "F-150",
+            "Make" => "Ford",
+            "Wheels" => 4,
+            "Doors" => 4
+        ], 
+        [
+            "Model" => "Benz",
+            "Make" => "Mercedes",
+            "Wheels" => 4,
+            "Doors" => 4
+        ], 
+        [
+            "Model" => "Navigator",
+            "Make" => "Lincoln",
+            "Wheels" => 4,
+            "Doors" => 4
+        ], 
+        [
+            "Model" => "BRZ",
+            "Make" => "Subaru",
+            "Wheels" => 4,
+            "Doors" => 2
+        ]
+    ];
+    $cars[0]["Doors"] = 2;    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +35,11 @@
     <title>Document</title>
 </head>
 <body>
-
+    <p>
+        <?php echo $cars[2]["Wheels"];?>
+    </p>
+    <p>
+        <?php echo $cars[0]["Doors"];?>
+    </p>
 </body>
 </html>
