@@ -1,14 +1,45 @@
 <?php
-    $name = "Devin";
-    // comment out
-    
-    # comment out
-    
-    /*
-    comment out
-    */
-    $car = "Ford F-150";
-    const plane = "Jet";
+    $name = "Bill";
+    // if ($name == "Devin") {
+    //     echo "Hi Devin";
+    // } elseif ($name == "Susy") {
+    //     echo "Hi Susy!";
+    // } else {
+    //     echo "Hi Stranger!";
+    // }
+
+    switch ($name) {
+        case "Devin":
+            echo "Hi Devin";
+            break;
+        case "Joe":
+            echo "Hi Joe";
+            break;
+        case "Susy":
+            echo "Hi Susy";
+            break;
+        default:
+            echo "Hi Stranger!";
+    }
+    $age = 16;
+    switch ($age) {
+        case $age >= 21: 
+            echo "You're old enough to drink and smoke";
+        break;
+        case $age >= 18:
+            echo "You're not old enough to only smoke";
+        break;
+        default:
+            echo "You're not old enough to drink and smoke";
+    }
+    $total = 101;
+    if ($total > 50 && $total < 100) {
+        echo "You get a free soda";
+    } elseif ($total > 100) {
+        echo "You get a free t-bone steak and soda";
+    } else {
+        echo "Your total is {$total}";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,10 +49,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php echo "<h1>My name is {$name}</h1>"?>
-    <?php echo $name?>
-    <?php echo "<h1>My name is " .$name. "</h1>"?>
-    <?php echo $car;?>
-    <?php echo plane;?>
+
 </body>
 </html>
