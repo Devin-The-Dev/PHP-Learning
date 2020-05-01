@@ -1,14 +1,8 @@
 <?php
-    // Get
-    if(isset($_GET['username'])) {
-        echo "<h1>username: {$_GET['username']}</h1>";
-        echo "<h1>lastname: {$_GET['lastname']}</h1>";
-        echo "<h1>age: {$_GET['age']}</h1>";
-    }
-    // Post
-    if(isset($_POST['username'])) {
-        echo $_POST['username'];
-    }
+// Cookies is how google keeps track of you
+    $amazon_key = "AmazonProduct";
+    $amazon_product = "Mac_Book_Air";
+    setcookie($amazon_key, $amazon_product, time() + (86400 * 30), "/"); //This says the key and product will be stored for 30 days on any page
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,11 +12,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="POST">
-        <label for="username">Username</label>
-        <input type="text" name="username">
-        <input type="password" name="password">
-        <button type="submit">Send</button>
-    </form>
+    <?php
+        if (isset($_COOKIE["AmazonProduct"])) {
+            echo $_COOKIE["AmazonProduct"]; //This happens if cookie has been stored before
+        } else {
+            echo "Sorry, no cookies for this user"; //This happens if cookie wasn't stored before
+        }
+    ?>
 </body>
 </html>
