@@ -1,8 +1,8 @@
 <?php
-// Cookies is how google keeps track of you
-    $amazon_key = "AmazonProduct";
-    $amazon_product = "Mac_Book_Air";
-    setcookie($amazon_key, $amazon_product, time() + (86400 * 30), "/"); //This says the key and product will be stored for 30 days on any page
+    session_start();
+    $_SESSION["amazon_key"] = "Mac Book Air";
+    session_unset();
+    session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +13,15 @@
 </head>
 <body>
     <?php
-        if (isset($_COOKIE["AmazonProduct"])) {
-            echo $_COOKIE["AmazonProduct"]; //This happens if cookie has been stored before
+        if (isset($_SESSION["amazon_key"])) {
+            echo $_SESSION["amazon_key"]; //This happens if cookie has been stored before
         } else {
             echo "Sorry, no cookies for this user"; //This happens if cookie wasn't stored before
         }
     ?>
+
+    <pre>
+        <?php echo var_dump($_SESSION)?>
+    </pre>
 </body>
 </html>
