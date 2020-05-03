@@ -1,31 +1,14 @@
 <?php
-    class Car{
-        public $doors = 4;
-        public function __construct($name, $doors = 4, $color = "black"){
-            $this->doors = $doors;
-            $this->color = $color;
-            $this->name = $name;
-        }
-        
-        public function printName() {
-            echo $this->name;
-        }
-
-        public function statement() {
-            echo "<h1>This car is a {$this->name} and it has {$this->doors} doors. The color of it is {$this->color}.</h1>";
-        }
-    }
-
-    $ford = new Car("F-150");
-    $WhiteFord = new Car("F-150", 4, "White");
-    $BMW = new Car("M6", 4, "Space Gray");
-
-    $ford->statement();
-    $WhiteFord->statement();
-    $BMW->statement();
-    // echo "<pre>". var_dump($ford) . "</pre>";
-
-    
+    require ("classes/Car.php");
+    require ("classes/Ford.php");
+    require ("classes/BMW.php");
+    $car1 = new Ford("F-150", 4, "green", "25,000");
+    $car1->statement();
+    $car1->price();
+    echo "<hr>";
+    $car2 = new BMW("M6", 4, "space green", "80,000");
+    $car2->statement();
+    $car2->price();
 ?>
 <!DOCTYPE html>
 <html lang="en">
