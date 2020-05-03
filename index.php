@@ -1,8 +1,31 @@
 <?php
-    session_start();
-    $_SESSION["amazon_key"] = "Mac Book Air";
-    session_unset();
-    session_destroy();
+    class Car{
+        public $doors = 4;
+        public function __construct($name, $doors = 4, $color = "black"){
+            $this->doors = $doors;
+            $this->color = $color;
+            $this->name = $name;
+        }
+        
+        public function printName() {
+            echo $this->name;
+        }
+
+        public function statement() {
+            echo "<h1>This car is a {$this->name} and it has {$this->doors} doors. The color of it is {$this->color}.</h1>";
+        }
+    }
+
+    $ford = new Car("F-150");
+    $WhiteFord = new Car("F-150", 4, "White");
+    $BMW = new Car("M6", 4, "Space Gray");
+
+    $ford->statement();
+    $WhiteFord->statement();
+    $BMW->statement();
+    // echo "<pre>". var_dump($ford) . "</pre>";
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,16 +35,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        if (isset($_SESSION["amazon_key"])) {
-            echo $_SESSION["amazon_key"]; //This happens if cookie has been stored before
-        } else {
-            echo "Sorry, no cookies for this user"; //This happens if cookie wasn't stored before
-        }
-    ?>
-
-    <pre>
-        <?php echo var_dump($_SESSION)?>
-    </pre>
+    
 </body>
 </html>
