@@ -1,6 +1,7 @@
 <?php
     class BMW extends Car{
         public $company = "BMW";
+        public $companyYears = "25";
 
         public function __construct($name, $doors, $color, $price, Inventory $inventory) {
             $this->name = $name;

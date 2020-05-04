@@ -1,5 +1,5 @@
 <?php
-    class car {
+    class Car extends Story{
         public $doors = 4;
         public $color = "black";
         // public static $city = "Queens, New York";
@@ -14,6 +14,10 @@
 
         public static function city() {
             return "Queens, New York";
+        }
+        
+        public function printCompanyYears() {
+            return $this->companyYears;
         }
     }
 ?>
