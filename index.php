@@ -1,26 +1,14 @@
 <?php
-    require ("vendor/autoload.php");
+    require("classes/cars/name.php");
+    require("classes/user/name.php");
+    use App\Cars\Name as carName;
+    use App\User\Name as userName;
 
-    $car1 = new Ford("F-150", 4, "green", "25,000", new Inventory);
-    $car1->statement();
-    $car1->price();
-    $car1->storyTime();
-    echo "<hr>";
-    $car2 = new BMW("ML350", 4, "blue", "80,000", new Inventory);
-    $car2->statement();
-    $car2->price();
-    $car2->storyTime();
-    // $car1->store();
-    echo "<hr>";
-    // $car2 = new BMW("M6", 4, "space green", "80,000");
-    // $car2->statement();
-    // $car2->price();
-    // echo "<hr>";
-    // echo Car::$city;
-    echo Car::city();
-    $myName = new Text();
-    $myName->reverse()->uppercase()->print();
+    $carName = new carName("Ford");
+    $userName = new userName("Devin");
 
+    echo $carName->name;
+    echo $userName->name;
 ?>
 <!DOCTYPE html>
 <html lang="en">
