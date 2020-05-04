@@ -13,6 +13,7 @@
         public function price() {
             echo "<h1>The price of this {$this->company} {$this->name} is &euro;{$this->price}.</h1>";
             echo $this->inventory->carTotal($this->company, 9);
+            echo $this->inventory->carsSold(9);
         }
     }
 ?>

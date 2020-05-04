@@ -17,6 +17,7 @@
             $this->buyer();
             echo "<br>";
             echo $this->inventory->carTotal($this->company, 4);
+            echo $this->inventory->carsSold(4);
         }
 
         private function buyer() {
