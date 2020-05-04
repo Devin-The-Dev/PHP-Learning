@@ -4,6 +4,7 @@
     require ("classes/Car.php");
     require ("classes/Ford.php");
     require ("classes/BMW.php");
+    require ("classes/Text.php");
     $car1 = new Ford("F-150", 4, "green", "25,000", new Inventory);
     $car1->statement();
     $car1->price();
@@ -21,6 +22,8 @@
     // echo "<hr>";
     // echo Car::$city;
     echo Car::city();
+    $myName = new Text();
+    $myName->reverse()->uppercase()->print();
 
 ?>
 <!DOCTYPE html>
