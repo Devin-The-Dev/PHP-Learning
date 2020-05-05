@@ -1,7 +1,5 @@
 <?php
-    $location - basename($_SERVER['REQUEST_URI']);
-    // echo $location;
-    echo $_SERVER['REQUEST_URI'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +36,7 @@
     <div class="container">
         <?php include("includes/header.php"); ?>
         <section>
-            <h1>Home</h1>
+            <h1>Contact</h1>
         </section>
     </div>
 
