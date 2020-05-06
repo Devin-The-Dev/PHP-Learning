@@ -1,3 +1,5 @@
 <?php
-    $_SERVER['REQUEST_URI'];
+    $location = $_SERVER['REQUEST_URI'];
+    // echo $location;
+    // echo $_SERVER['REQUEST_URI'];
 ?>
